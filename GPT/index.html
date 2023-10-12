@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #profile {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        #profile img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        #editButton {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #bio {
+            text-align: left;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="profile">
+        <img src="profile-picture.jpg" alt="Profile Picture">
+        <h1 id="name">Your Name</h1>
+        <p id="bioText">This is your bio. Click the button to edit.</p>
+        <button id="editButton">Edit Bio</button>
+        <div id="bio">
+            <textarea id="bioTextArea" rows="4" cols="30"></textarea>
+            <button id="saveButton">Save</button>
+        </div>
+    </div>
+
+    <script>
+        const editButton = document.getElementById("editButton");
+        const bioText = document.getElementById("bioText");
+        const bio = document.getElementById("bio");
+        const bioTextArea = document.getElementById("bioTextArea");
+        const saveButton = document.getElementById("saveButton");
+
+        editButton.addEventListener("click", () => {
+            bioText.style.display = "none";
+            bio.style.display = "block";
+            bioTextArea.value = bioText.textContent;
+        });
+
+        saveButton.addEventListener("click", () => {
+            bioText.textContent = bioTextArea.value;
+            bioText.style.display = "block";
+            bio.style.display = "none";
+        });
+    </script>
+</body>
+</html>
