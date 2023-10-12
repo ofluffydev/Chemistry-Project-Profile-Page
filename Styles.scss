@@ -22,10 +22,11 @@ body {
     .profile-banner {
         position: relative;
         width: 100%;
-        max-height: 300px; /* Set the desired height for your banner */
+        max-height: 300px;
+        /* Set the desired height for your banner */
         overflow: hidden;
     }
-    
+
     .profile-banner img {
         width: 100%;
         height: auto;
@@ -48,6 +49,41 @@ body {
         /* Make the profile picture round */
     }
 
+    .topInfo {
+        border: white solid 0.2em;
+        border-radius: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding: 1em;
+        animation: cycle-color-border 3s linear infinite alternate;
+
+
+        .name {
+            font-family: PressStart2P;
+        }
+    }
+
+    .infoBox {
+        border: white solid 0.2em;
+        border-radius: 2em;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        animation: cycle-color-border 3s linear infinite alternate;
+
+        width: 30%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        .title {
+            color: aquamarine;
+        }
+    }
 
 
 }
@@ -150,6 +186,36 @@ body {
 
     100% {
         color: rgb(255, 0, 0);
+        border-color: rgb(255, 0, 0);
+    }
+}
+
+@keyframes cycle-color-border {
+    0% {
+        border-color: rgb(255, 0, 0);
+    }
+
+    16.6666% {
+        border-color: rgb(255, 255, 0);
+    }
+
+    33.3333% {
+        border-color: rgb(0, 255, 0);
+    }
+
+    50% {
+        border-color: rgb(0, 255, 255);
+    }
+
+    66.6666% {
+        border-color: rgb(0, 0, 255);
+    }
+
+    83.3333% {
+        border-color: rgb(255, 0, 255);
+    }
+
+    100% {
         border-color: rgb(255, 0, 0);
     }
 }
