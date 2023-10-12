@@ -4,15 +4,12 @@ body {
 }
 
 #pageBody {
-  border: 0.1em solid white;
   color: white;
   margin-left: 20%;
   margin-right: 20%;
   min-height: 100vh;
   background-color: #252525;
   box-shadow: 0em 2em 10em 2em black;
-  border-top: 0;
-  border-bottom: 0;
 }
 #pageBody .profile-header {
   position: relative;
