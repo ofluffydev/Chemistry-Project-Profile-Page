@@ -1,4 +1,6 @@
 body {
+  background-image: url(media/plutoniumGif.gif);
+  background-repeat: repeat;
   background-color: #262626;
   margin: 0;
 }
@@ -10,9 +12,6 @@ body {
   min-height: 100vh;
   background-color: #252525;
   box-shadow: 0em 2em 10em 2em black;
-}
-#pageBody #livesAt {
-  height: 20%;
 }
 #pageBody .profile-header {
   position: relative;
@@ -63,9 +62,13 @@ body {
 }
 #pageBody .pageInfo {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
 }
 #pageBody .pageInfo .infoBox {
+  width: min-content;
+  height: min-content;
   border: white solid 0.2em;
   border-radius: 2em;
   margin-left: 2%;
@@ -80,7 +83,6 @@ body {
   padding-right: 2%;
   /* Style for the slideshow container */
   /* Style for the images in the slideshow */
-  /* Style for the navigation dots */
 }
 #pageBody .pageInfo .infoBox .title {
   color: aquamarine;
@@ -105,7 +107,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Maintain image aspect ratio while covering the fixed container height */
 }
 #pageBody .pageInfo .infoBox .dot {
   height: 15px;
