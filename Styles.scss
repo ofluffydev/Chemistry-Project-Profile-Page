@@ -75,6 +75,8 @@ body {
         justify-content: center;
 
         .infoBox {
+            opacity: 0;
+            transition: opacity 1s;
             width: min-content;
             height: min-content;
             border: white solid 0.2em;
@@ -134,6 +136,7 @@ body {
             .active {
                 background-color: #717171;
             }
+
         }
     }
 }
@@ -197,6 +200,11 @@ body {
 
     }
 }
+
+.visible {
+    opacity: 1 !important;
+}
+
 
 @font-face {
     font-family: PressStart2P;
